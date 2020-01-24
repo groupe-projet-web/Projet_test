@@ -1,0 +1,41 @@
+drop table projet_web.utilisateur;
+drop table projet_web.ticket;
+
+
+create table utilisateur(
+                            login varchar(30),
+                            pass varchar(50),
+                            nom varchar(150) not null,
+                            prenom varchar(150) not null,
+                            email varchar(150),
+                            role varchar(60) not null,
+                            constraint cle_primaire_util primary key(login, pass)
+);
+
+create table ticket(
+                       id int,
+                       message varchar(300),
+                       etat varchar(30) not null,
+                       reponse varchar(300),
+                       date_ouvert datetime,
+                       auteur varchar(150),
+                       constraint cle_primaire_tick primary key(id),
+                       constraint fk_ticket foreign key (auteur) references utilisateur.nom
+);
+
+insert into projet_web.utilisateur(login, pass, nom, prenom, email, role) values ("jeanm","jeanm","Jean","Marie", "jeanm@gmail.com", "admin");
+insert into projet_web.utilisateur(login, pass, nom, prenom, email, role) values ("edwigem","edwigem","Monthe","Edwige","edwigem.com", "admin");
+insert into projet_web.utilisateur(login, pass, nom, prenom, email, role) values ("brucyl","brucyl","Lekedji","Brucy", "brucyl@gmail.com","admin");
+insert into projet_web.utilisateur(login, pass, nom, prenom, email, role) values ("nodata","nodata","No","Data", "nodata@gmail.com","admin");
+insert into projet_web.utilisateur(login, pass, nom, prenom, email, role) values ("test","test","Test","test", "test@gmail.com","admin");
+
+insert into projet_web.utilisateur(login, pass, nom, prenom, email, role) values ("totol","totol","Toto","Luc", "totol@gmail.com","client");
+insert into projet_web.utilisateur(login, pass, nom, prenom, email, role) values ("tatal","tatal","Tata","Lucie", "tatal@gmail.com","client");
+insert into projet_web.utilisateur(login, pass, nom, prenom, email, role) values ("titil","titil","Titi","Lucien", "titil@gmail.com","client");
+insert into projet_web.utilisateur(login, pass, nom, prenom, email, role) values ("pouloulou","pouloulou","Pou","Loulou", "pouloulou@gmail.com","client");
+insert into projet_web.utilisateur(login, pass, nom, prenom, email, role) values ("mattp","mattp","Matt","Pokora", "mattp@gmail.com","client");
+insert into projet_web.utilisateur(login, pass, nom, prenom, email, role) values ("pitb","pitb","Pit","Baccardi", "pitb@gmail.com","client");
+insert into projet_web.utilisateur(login, pass, nom, prenom, email, role) values ("larac","larac","Lara","Croft", "larac@gmail.com","client");
+insert into projet_web.utilisateur(login, pass, nom, prenom, email, role) values ("coluche","coluche","Co","Luche", "coluche@gmail.com","client");
+insert into projet_web.utilisateur(login, pass, nom, prenom, email, role) values ("manud","manud","Manu","Dibango", "manudibango@gmail.com","client");
+insert into projet_web.utilisateur(login, pass, nom, prenom, email, role) values ("mjackson","mjackson","Mick","Jackson", "jackson@gmail.com","client");
