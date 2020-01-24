@@ -16,7 +16,7 @@
 			</div>
 			<ul class="nav-list">
 				<li class="nav-list-item">
-					<a href="#" class="nav-link">Home</a>
+					<a href="#" class="nav-link">Home New</a>
 				</li>
 				<li class="nav-list-item">
 					<a href="ouverturedecompte.html" class="nav-link">Creer un Compte</a>
