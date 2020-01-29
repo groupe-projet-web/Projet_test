@@ -8,17 +8,14 @@ if(!isset($_GET["login"]) || !isset($_GET["pass"]))
 	exit();
 }
 
-//Exécution
-$login=$_GET["login"];
-$mdp=$_GET["pass"];
 
 // Création du texte de la requête
-$reqtxt="select pass,droits from utilisateur where login=:log and pass=:mdp";
+$reqtxt="select pass,role from client where login=:log";
 
 // Préparation
 $req=$maCnx->prepare($reqtxt);
 $req->bindParam(':log',$login);
-$req->bindParam(':mdp',$mdp);
+
 
 //Exécution
 $login=$_GET["login"];
@@ -29,28 +26,33 @@ $req->execute();
 //Récupération des données dans un tableau associatif
 $tabRes=$req->fetchAll(PDO::FETCH_ASSOC);
 
-
+var_dump($_GET);
 
 if(count($tabRes)==1)
 {
-$_SESSION["login"]=$_GET["login"];
+ $Res1=$tabRes[0];
+ 
+ if (password_verify($_GET["pass"],$Res1["pass"]))
+ {
+  $_SESSION["login"]=$_GET["login"];
+  $_SESSION["role"]=$Res1["role"];
 
-$Res1=$tabRes[0];
-$_SESSION["droits"]=$Res1["droits"];
-if($Res1["droits"]=="administrateur")
-{
-header('location:accueil2.php');
-exit();
-}
-else if($Res1["droits"]=="utilisateur")
-{
-header('location:accueilUTI.php');
-exit();
-}else {
-	echo "rien";
-}
-
-}
+  if($Res1["role"]=="admin")
+   {
+    header('location:accueil2.php');
+    exit();
+   }
+  else if($Res1["role"]=="client")
+   {
+    header('location:accueilUTI.php');
+    exit();
+   }
+ } # fin if verify
+ else {
+ 	header("location:index.php?message=erreur verification");
+    exit();
+ }
+} # fin if count
 else {
 	 header("location:index.php?message=erreur d'identification");
       exit();
