@@ -4,7 +4,7 @@ drop table projet_web.ticket;
 
 create table utilisateur(
                             login varchar(30),
-                            pass varchar(50),
+                            pass varchar(100),
                             nom varchar(150) not null,
                             prenom varchar(150) not null,
                             email varchar(150),
@@ -39,3 +39,7 @@ insert into projet_web.utilisateur(login, pass, nom, prenom, email, role) values
 insert into projet_web.utilisateur(login, pass, nom, prenom, email, role) values ("coluche","coluche","Co","Luche", "coluche@gmail.com","client");
 insert into projet_web.utilisateur(login, pass, nom, prenom, email, role) values ("manud","manud","Manu","Dibango", "manudibango@gmail.com","client");
 insert into projet_web.utilisateur(login, pass, nom, prenom, email, role) values ("mjackson","mjackson","Mick","Jackson", "jackson@gmail.com","client");
+
+
+insert into projet_web.ticket(id, message, etat, reponse, date_ouvert, auteur) values (1,"Pain mal chargé", "ouvert", "",sysdate(),"No");
+insert into projet_web.ticket(id, message, etat, reponse, date_ouvert, auteur) values (2,"Pain trop chargé", "ouvert", "",sysdate(),"No");
