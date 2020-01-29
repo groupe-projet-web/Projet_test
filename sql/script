@@ -23,6 +23,7 @@ create table ticket(
                        constraint fk_ticket foreign key (auteur) references utilisateur.nom
 );
 
+
 insert into projet_web.utilisateur(login, pass, nom, prenom, email, role) values ("jeanm","jeanm","Jean","Marie", "jeanm@gmail.com", "admin");
 insert into projet_web.utilisateur(login, pass, nom, prenom, email, role) values ("edwigem","edwigem","Monthe","Edwige","edwigem.com", "admin");
 insert into projet_web.utilisateur(login, pass, nom, prenom, email, role) values ("brucyl","brucyl","Lekedji","Brucy", "brucyl@gmail.com","admin");
