@@ -4,7 +4,7 @@ drop table projet_web.ticket;
 
 create table utilisateur(
                             login varchar(30),
-                            pass varchar(50),
+                            pass varchar(100),
                             nom varchar(150) not null,
                             prenom varchar(150) not null,
                             email varchar(150),
