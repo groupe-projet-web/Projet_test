@@ -13,7 +13,7 @@
 			</div>
 			<ul class="nav-list">
 				<li class="nav-list-item">
-					<p><h3>Incidence des Tickets</h3> </p>
+					<p><h3>Tickets d'Incidence</h3> </p>
 				</li>
 				<li class="nav-list-item">
 					<a href="Inscrit.php" class="nav-link">Creer un Compte</a>

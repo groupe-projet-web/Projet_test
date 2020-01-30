@@ -1,5 +1,5 @@
-drop table projet_web.utilisateur;
 drop table projet_web.ticket;
+drop table projet_web.utilisateur;
 
 
 create table utilisateur(
