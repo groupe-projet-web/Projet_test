@@ -1,5 +1,5 @@
     <meta charset="utf-8"/>
-	<link rel="stylesheet" type = "text/css" href="/Web_Mini_Projet/style.css" />
+	<link rel="stylesheet" type = "text/css" href="/Web_Mini_Projet/mesCss/style.css" />
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -13,7 +13,7 @@
 			</div>
 			<ul class="nav-list">
 				<li class="nav-list-item">
-					<p><h3>Incidence des Tickets</h3> </p>
+					<p><h3>Tickets d'Incidence</h3> </p>
 				</li>
 				<li class="nav-list-item">
 					<a href="Inscrit.php" class="nav-link">Creer un Compte</a>
