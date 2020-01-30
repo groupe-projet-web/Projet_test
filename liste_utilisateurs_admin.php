@@ -1,14 +1,14 @@
 <?php
 session_start();
-
 $connexion = new PDO("mysql:host=localhost;dbname=base_cours", "root", "root");
-
-$texteRequete = "select login, noom, prenom,  email, droits from utilisateur";
+$texteRequete = "select login, nom, prenom,  email, role from projet_web.utilisateur";
 $requete = $connexion->prepare($texteRequete);
 $requete->execute();
 
 // Récupération du résultat dans un tableau associatif
 $tabUtilisateurs = $requete->fetchAll(PDO::FETCH_ASSOC);
+
+//var_dump($tabUtilisateurs);
 ?>
 
 <!DOCTYPE html>
@@ -21,6 +21,7 @@ $tabUtilisateurs = $requete->fetchAll(PDO::FETCH_ASSOC);
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
+<?php include()?>
 <body>
 <h1 class="">Liste des utilisateurs</h1>
 <br><br>
@@ -30,18 +31,19 @@ $tabUtilisateurs = $requete->fetchAll(PDO::FETCH_ASSOC);
     <td>Nom</td>
     <td>Prénom</td>
     <td>Email</td>
-    <td>Droits</td>
+    <td>Role</td>
     <td>Suppression</td>
     </thead>
     <?php
     foreach ($tabUtilisateurs as $Ligne) {
-        echo "<tr><td>" . $Ligne['login'] . " </td><td> " . $Ligne['droits'] . '</td><td>  <button onclick="supprimerUtil(<?=$Ligne['login']>)"> Supprimer </button> </td></tr>';
+        echo "<tr><td>" . $Ligne['login'] . " </td>
+                  <td>" . $Ligne['nom'] . " </td>
+                  <td>" . $Ligne['prenom'] . " </td>
+                  <td>" . $Ligne['email'] . " </td>
+                  <td> " . $Ligne['role'] . '</td>
+                  <td>  Supprimer </button> </td></tr>';
     }
     ?>
 </table>
-    <?php
-    $maCnx=new PDO('mysql:host=localhost;dbname=test','root','root');
-
-    ?>
 </body>
 </html>
