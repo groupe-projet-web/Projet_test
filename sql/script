@@ -9,7 +9,7 @@ create table utilisateur(
                             prenom varchar(150) not null,
                             email varchar(150),
                             role varchar(60) not null,
-                            constraint cle_primaire_util primary key(login, pass)
+                            constraint cle_primaire_util primary key(login)
 );
 
 create table ticket(
@@ -20,7 +20,7 @@ create table ticket(
                        date_ouvert datetime,
                        auteur varchar(150),
                        constraint cle_primaire_tick primary key(id),
-                       constraint fk_ticket foreign key (auteur) references utilisateur.nom
+                       constraint fk_ticket foreign key (auteur) references utilisateur(login)
 );
 
 
@@ -42,5 +42,5 @@ insert into projet_web.utilisateur(login, pass, nom, prenom, email, role) values
 insert into projet_web.utilisateur(login, pass, nom, prenom, email, role) values ("mjackson","mjackson","Mick","Jackson", "jackson@gmail.com","client");
 
 
-insert into projet_web.ticket(id, message, etat, reponse, date_ouvert, auteur) values (1,"Pain mal chargé", "ouvert", "",sysdate(),"No");
-insert into projet_web.ticket(id, message, etat, reponse, date_ouvert, auteur) values (2,"Pain trop chargé", "ouvert", "",sysdate(),"No");
+insert into projet_web.ticket(id, message, etat, reponse, date_ouvert, auteur) values (1,"Pain mal chargé", "ouvert", "",sysdate(),"nodata");
+insert into projet_web.ticket(id, message, etat, reponse, date_ouvert, auteur) values (2,"Pain trop chargé", "ouvert", "",sysdate(),"nodata");

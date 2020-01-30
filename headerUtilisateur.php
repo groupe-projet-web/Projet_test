@@ -16,7 +16,7 @@
 					<p><h3>Incidence des Tickets</h3> </p>
 				</li>
 				<li class="nav-list-item">
-					<a href="ouverturedecompte.html" class="nav-link">Creer un Compte</a>
+					<a href="Inscrit.php" class="nav-link">Creer un Compte</a>
 				</li>
 				<li class="nav-list-item">
 					<a href="deconnexion.php" class="nav-link">Deconnexion</a>
