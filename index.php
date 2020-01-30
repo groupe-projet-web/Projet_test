@@ -5,11 +5,12 @@
 <head>
     <link rel="stylesheet" href="mesCss/bootstrap.min.css" />
     <link rel="stylesheet" href="mesCss/fichCss.css" />
+	<link rel="stylesheet" href="mesCss/style.css" />
 
 </head>
-<body class="container bodyConnex">
-    
-    <div class="bgDiv">
+<body class=" bodyConnex">
+ 
+    <div class="bgDiv" >
         <br /><br />
         <h1 class="bg-info text-center">BIENVENUE SUR VOTRE SITE DE GESTION DE TICKETS INCIDENTS</h1>
         <br />
@@ -29,15 +30,17 @@
 
                     <br /><br /><br /> <input type="submit" value="Connexion" />
                     vous n'avez pas encore de compte?
-                    <a href="inscription.php" class="text-success">Inscription</a>
+                    <a href="Inscrit.php" class="text-success">Inscription</a>
                 </div>
             </form>
 
         </div>
     </div>
+	
+
 </body>
 
 <?php
-require_once 'footer.php';
+include ('footer.php');
 ?>
 </html>
