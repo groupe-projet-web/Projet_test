@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <link rel="stylesheet" type="text/css" href="/Web_Mini_Projet/mesCss/style.css" />
+ <link rel="stylesheet" href="mesCss/bootstrap.min.css" />
+<link rel="stylesheet" href="mesCss/fichCss.css" />
 <title>Inscription</title>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>

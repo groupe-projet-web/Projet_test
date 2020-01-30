@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="mesCss/fichCss.css" />
 
 </head>
-<body class="container bodyConnex">
+<body style="align:center;"class="bodyConnex" >
     
-    <div class="bgDiv">
+    <div class="bgDiv" >
         <br /><br />
         <h1 class="bg-info text-center">BIENVENUE SUR VOTRE SITE DE GESTION DE TICKETS INCIDENTS</h1>
         <br />
