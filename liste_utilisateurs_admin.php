@@ -21,7 +21,7 @@ $tabUtilisateurs = $requete->fetchAll(PDO::FETCH_ASSOC);
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
-<?php include()?>
+<?php include('headerUtilisateur.php')?>
 <body>
 <h1 class="">Liste des utilisateurs</h1>
 <br><br>
