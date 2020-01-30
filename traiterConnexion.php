@@ -10,7 +10,7 @@ if(!isset($_GET["login"]) || !isset($_GET["pass"]))
 
 
 // Création du texte de la requête
-$reqtxt="select pass,role from client where login=:log";
+$reqtxt="select pass,role from utilisateur where login=:log";
 
 // Préparation
 $req=$maCnx->prepare($reqtxt);
@@ -26,12 +26,13 @@ $req->execute();
 //Récupération des données dans un tableau associatif
 $tabRes=$req->fetchAll(PDO::FETCH_ASSOC);
 
-var_dump($_GET);
+var_dump($tabRes);
+
 
 if(count($tabRes)==1)
 {
  $Res1=$tabRes[0];
- 
+
  if (password_verify($_GET["pass"],$Res1["pass"]))
  {
   $_SESSION["login"]=$_GET["login"];

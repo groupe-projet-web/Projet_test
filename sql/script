@@ -25,7 +25,7 @@ create table ticket(
 
 insert into projet_web.utilisateur(login, pass, nom, prenom, email, role) values ("jeanm","$2y$10$.VBmv8Qz/yMUyI8qJJ.Sk.nhs046atKC/EiM.EtvPgpoRYz2QcELy","Jean","Marie", "jeanm@gmail.com", "admin");
 insert into projet_web.utilisateur(login, pass, nom, prenom, email, role) values ("edwigem","$2y$10$RzmqqdvS96sY548Aw9.wL.UcqczJ1O9izb5ZcD9AM9Si/erW9yY/e","Monthe","Edwige","edwigem.com", "admin");
-insert into projet_web.utilisateur(login, pass, nom, prenom, email, role) values ("brucyl","$2y$10$9aRmZTBfrDa7wr1BH/qa5.ePaZTVvKz/VBfLM5xMiJWqeFRFDrwgK","Lekedji","Brucy", "brucyl@gmail.com","admin");
+insert into projet_web.utilisateur(login, pass, nom, prenom, email, role) values ("brucyl","$2y$10$I.VhcuooQcBrk703OKlupOVu7EkamHtNNfZev/YnqGkb9uxEy.jOG","Lekedji","Brucy", "brucyl@gmail.com","admin");
 insert into projet_web.utilisateur(login, pass, nom, prenom, email, role) values ("nodata","$2y$10$vrVULDKdxRH5Ww/t019NGOnAjrT8fipCqQFfI8B9aU5a5lgDqy3Ua","No","Data", "nodata@gmail.com","admin");
 insert into projet_web.utilisateur(login, pass, nom, prenom, email, role) values ("test","$2y$10$h4H2WzR8pbUbr1On9uAiuOtCX5huN993Iq4PrPnjEt8VASgJcO/SC","Test","test", "test@gmail.com","admin");
 

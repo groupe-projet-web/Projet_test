@@ -1,8 +1,10 @@
+
+
 <!DOCTYPE html>
 <html>
 <head>
     <link rel="stylesheet" href="mesCss/bootstrap.min.css" />
-    <link rel="stylesheet" href="fichCss.css" />
+    <link rel="stylesheet" href="mesCss/fichCss.css" />
 
 </head>
 <body class="container bodyConnex">
@@ -41,3 +43,6 @@
 </body>
 
 </html>
+<?php
+require_once 'footer.php';
+?>
