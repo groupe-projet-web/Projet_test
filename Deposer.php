@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+dsqc<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8" />
@@ -25,7 +25,7 @@
 	
 		<div align="center">
 
-			<form action="traiterInscripUti.php" method="GET">
+			<form action="ouverture.php" method="POST">
 				<table>
 					<tr>
 						<br />
@@ -44,10 +44,6 @@
 					<tr>
 						<td><label for=login>EMAIL: </label></td>
 						<td><input type="text" class="form-control" name="email"><br></td>
-					</tr>
-					<tr>
-						<td><label for=login>LOGIN: </label></td>
-						<td><input type="text" class="form-control" name="login"><br></td>
 					</tr>
 					<tr>
 						<td><label for=pass>MOT DE PASSE: </label></td>

@@ -22,7 +22,7 @@
 					<a href="deconnexion.php" class="nav-link">Deconnexion</a>
 				</li>
 				<li class="nav-list-item">
-				<img onClick="" src="/Web_Mini_Projet/utilisateur.png" sizes="20x20">
+				<img onClick="" src="img/utilisateur.png" sizes="20x20">
 				</li>
 			</ul>
 
