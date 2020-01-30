@@ -15,7 +15,7 @@ catch(PDOException $e)
 
     //une requête préparée n'est pas neccessaire
 
-    $pdoStat=$maCnx->prepare('SELECT id, message, etat, reponse, date_ouvert FROM ticket');
+    $pdoStat=$maCnx->prepare('SELECT id, message, etat, reponse, date_ouvert FROM ticket where auteur =""');
 
     //execution de la requête
     $exceuteIsOk = $pdoStat->execute();
