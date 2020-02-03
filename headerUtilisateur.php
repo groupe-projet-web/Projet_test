@@ -1,5 +1,5 @@
-    <meta charset="utf-8"/>
-	<link rel="stylesheet" type = "text/css" href="/Web_Mini_Projet/mesCss/style.css" />
+﻿    <meta charset="utf-8"/>
+	<link rel="stylesheet" type = "text/css" href="mesCss/style.css" />
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -16,7 +16,7 @@
 					<p><h3>Tickets d'Incidence</h3> </p>
 				</li>
 				<li class="nav-list-item">
-					<a href="Inscrit.php" class="nav-link">Creer un Compte</a>
+					<a href="Deposer.php" class="nav-link">Déposer un Ticket</a>
 				</li>
 				<li class="nav-list-item">
 					<a href="deconnexion.php" class="nav-link">Deconnexion</a>
