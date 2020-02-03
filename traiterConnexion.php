@@ -40,12 +40,12 @@ if(count($tabRes)==1)
 
   if($Res1["role"]=="admin")
    {
-    header('location:accueil2.php');
+    header('location:liste_utilisateurs_admin.php');
     exit();
    }
   else if($Res1["role"]=="client")
    {
-    header('location:accueilUTI.php');
+    header('location:AccueilUtil.php');
     exit();
    }
  } # fin if verify

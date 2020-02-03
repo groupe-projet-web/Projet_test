@@ -41,5 +41,5 @@ insert into projet_web.utilisateur(login, pass, nom, prenom, email, role) values
 insert into projet_web.utilisateur(login, pass, nom, prenom, email, role) values ("mjackson","$2y$10$tk6v30HpnIw6o4usx9UvbuffMwAwonJbkB9v1oFgQdz.5S.LuB3f.","Mick","Jackson", "jackson@gmail.com","client");
 
 
-insert into projet_web.ticket(id, message, etat, reponse, date_ouvert, auteur) values (1,"Pain mal chargé", "ouvert", "",sysdate(),"nodata");
-insert into projet_web.ticket(id, message, etat, reponse, date_ouvert, auteur) values (2,"Pain trop chargé", "ouvert", "",sysdate(),"nodata");
+insert into projet_web.ticket(id, message, etat, reponse, date_ouvert, auteur) values (1,"Pain mal chargé", "ouvert", "",sysdate(),"totol");
+insert into projet_web.ticket(id, message, etat, reponse, date_ouvert, auteur) values (2,"Pain trop chargé", "ouvert", "",sysdate(),"titil");

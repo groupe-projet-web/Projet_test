@@ -1,24 +1,16 @@
-<?php
+ï»¿<?php
     //ouverture d'une connexion
+	session_start();
+	require_once 'connexion.php';
 
-try
-{
-	$maCnx=new PDO('mysql:host=localhost;dbname=projet_web','root','root');
+	
+    //une requÃªte prÃ©parÃ©e n'est pas neccessaire
 
-}
-catch(PDOException $e)
-{
- echo "Erreur PDO : ".$e->getMessage()."<br/>";
- die();
+    $pdoStat=$maCnx->prepare('SELECT id, message, etat, reponse, date_ouvert FROM ticket where auteur =:log');
 
-}
-
-    //une requête préparée n'est pas neccessaire
-
-    $pdoStat=$maCnx->prepare('SELECT id, message, etat, reponse, date_ouvert FROM ticket where auteur =""');
-
-    //execution de la requête
-    $exceuteIsOk = $pdoStat->execute();
-    //recuperation du résultat dans un tableau
-    $tickets = $pdoStat->fetchAll();
+    $pdoStat->bindParam(':log',$_SESSION["login"]);
+    //execution de la requÃªte
+    $pdoStat->execute();
+    //recuperation du rÃ©sultat dans un tableau
+    $tickets = $pdoStat->fetchAll(PDO::FETCH_ASSOC);
     ?>

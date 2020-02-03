@@ -1,20 +1,14 @@
-﻿<html>
+﻿<!DOCTYPE html>
+<html lang="fr">
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="/Web_Mini_Projet/mesCss/style.css" />
-    <title>Le Foyer</title>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <title>Nos Menus</title>
-    <!--Made with love by Mutiullah Samim -->
-    <!--Bootsrap 4 CDN-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
-    <!--Fontawesome CDN-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <style type="text/css">
-    </style>
+    <title>Mes Tickets</title>
+ 
+</head>
 
     
 <body>
@@ -46,22 +40,7 @@
                 </table>
             </div>
     </div>
-    <script>
-    function suppUtil(logUtil)
-    {
-    // Suppression brutale sans confirmation
-    $.get("supprimerUtil.php",{login:logUtil},traiterRepSup);
-	}
     
-    function traiterRepSup(donnees)
-    {
-     if (donnees!="----erreur----")
-     {
-     $("tr").filter(":contains("+donnees+")").remove();
-	 }
-	}
-    </script>
-
 </body>
 <?php include('footer.php'); ?>
 </html>
