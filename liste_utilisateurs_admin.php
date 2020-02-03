@@ -1,6 +1,6 @@
 <?php
 session_start();
-$connexion = new PDO("mysql:host=localhost;dbname=base_cours", "root", "root");
+$connexion = new PDO("mysql:host=localhost;dbname=projet_web", "root", "root");
 $texteRequete = "select login, nom, prenom,  email, role from projet_web.utilisateur";
 $requete = $connexion->prepare($texteRequete);
 $requete->execute();
