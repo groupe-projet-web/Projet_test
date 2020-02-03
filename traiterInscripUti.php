@@ -1,5 +1,5 @@
 <?php
-session_start();
+ session_start();
 require_once 'connexion.php';
 
 if(!isset($_GET["nom"]) || !isset($_GET["prenom"]) || !isset($_GET["email"]) || !isset($_GET["pass"]) || !isset($_GET["login"]))
