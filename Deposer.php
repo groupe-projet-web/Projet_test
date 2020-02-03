@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8" />
@@ -28,7 +28,11 @@
 					</tr>
 					<tr>
 						<td><label for=login>Message: </label></td>
-						<td><input type="text" class="form-control" name="message"><br></td>
+						<td><TEXTAREA name="message" class="form-control" cols="50" rows="10"></TEXTAREA></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><button type="submit" name="submit" class="form-control">Envoyer</button></td>
 					</tr>
 					<tr></tr>
 				</table>
