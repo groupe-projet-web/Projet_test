@@ -29,10 +29,9 @@
             <h1 class="bg-info text-center">Liste des Tickets</h1>
             
      
-            <div center>
-                <table class ="table">
+            <div center style="overflow-x:auto; ">
+                <table bgcolor="#deb887" class ="table table-striped d-md-table table-bordered flex-column">
                     <tr>
-                        <th>id	</th>
                         <th>message </th>
                         <th>etat</th>
                         <th>reponse</th>

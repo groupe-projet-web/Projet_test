@@ -8,7 +8,7 @@ if(!isset($_GET["nom"]) || !isset($_GET["prenom"]) || !isset($_GET["email"]) || 
 	exit();
 }
 
-//Exécution
+//Exï¿½cution
 $nom=$_GET["nom"];
 $prenom=$_GET["prenom"];
 $mail=$_GET["email"];
@@ -16,17 +16,17 @@ $login=$_GET["login"];
 $mdp=password_hash($_GET["pass"],PASSWORD_DEFAULT);
 $role="client";
 
-// Création du texte de la requête
+// Crï¿½ation du texte de la requï¿½te
 $reqtxt="select login,pass,droits from utilisateur where login=:log";
 
-// Préparation
+// Prï¿½paration
 $req=$maCnx->prepare($reqtxt);
 $req->bindParam(':log',$login);
 
 
 $req->execute();
 
-//Récupération des données dans un tableau associatif
+//Rï¿½cupï¿½ration des donnï¿½es dans un tableau associatif
 $tabRes=$req->fetchAll(PDO::FETCH_ASSOC);
 
 
@@ -39,7 +39,7 @@ echo $donnees='error';
 {
 $reqtxt1="insert into utilisateur (login, pass, nom, prenom, email, role) values (:login, :pass, :nom, :prenom, :email, :role)";
 
-// Préparation
+// Prï¿½paration
 $req1=$maCnx->prepare($reqtxt1);
 $req1->bindParam(':login',$login);
 $req1->bindParam(':pass',$mdp);
