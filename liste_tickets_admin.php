@@ -25,12 +25,18 @@ $tabUtilisateurs = $requete->fetchAll(PDO::FETCH_ASSOC);
 <body>
 <h1 class="">Liste des tickets</h1>
 <br><br>
-
-<table class="table table-striped d-md-table table-bordered">
+<div style="overflow-x:auto;">
+<table bgcolor="#f5f5dc" class="table d-md-table table-bordered flex-column">
+    <!-- Control buttons -->
+    <div id="myBtnContainer">
+        <button class="btn active" onclick="filterSelection('all')"> Afficher tout</button>
+        <button class="btn" onclick="filterSelection('cars')"> Ouverts</button>
+        <button class="btn" onclick="filterSelection('animals')"> Fermés</button>
+        <button class="btn" onclick="filterSelection('fruits')"> Annulés</button>
+    </div>
     <thead>
-    <td title="id">Id <input type="submit" class="button" name="insert" value="insert" /></td>
-    <td title="">Message <input type="submit" class="button" name="insert" value="insert" /></td>
-    <td>Auteur <input type="submit" class="button" name="insert" value="insert" /></td>
+    <td title="">Message </td>
+    <td>Auteur <img src="img\download.png"></td>
     <td>Etat <img src="img\download.png"></td>
     <td>Reponse <img src="img\download.png"></td>
     <td>Date d'ouverture <img src="img\download.png"></td>
@@ -39,8 +45,7 @@ $tabUtilisateurs = $requete->fetchAll(PDO::FETCH_ASSOC);
     </thead>
     <?php
     foreach ($tabUtilisateurs as $Ligne) {
-        echo "<tr><td>" . $Ligne['id'] . " </td>
-                  <td>" . $Ligne['message'] . " </td>
+        echo "<tr><td>" . $Ligne['message'] . " </td>
                   <td>" . $Ligne['auteur'] . " </td>
                   <td>" . $Ligne['etat'] . " </td>
                   <td>" . $Ligne['reponse'] . " </td>
@@ -50,5 +55,6 @@ $tabUtilisateurs = $requete->fetchAll(PDO::FETCH_ASSOC);
     }
     ?>
 </table>
+</div>
 </body>
 </html>
