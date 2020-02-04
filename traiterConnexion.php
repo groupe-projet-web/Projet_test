@@ -9,21 +9,21 @@ if(!isset($_GET["login"]) || !isset($_GET["pass"]))
 }
 
 
-// Création du texte de la requête
+// Crï¿½ation du texte de la requï¿½te
 $reqtxt="select pass,role from utilisateur where login=:log";
 
-// Préparation
+// Prï¿½paration
 $req=$maCnx->prepare($reqtxt);
 $req->bindParam(':log',$login);
 
 
-//Exécution
+//Exï¿½cution
 $login=$_GET["login"];
 $mdp=$_GET["pass"];
 
 $req->execute();
 
-//Récupération des données dans un tableau associatif
+//Rï¿½cupï¿½ration des donnï¿½es dans un tableau associatif
 $tabRes=$req->fetchAll(PDO::FETCH_ASSOC);
 
 var_dump($tabRes);
@@ -40,7 +40,7 @@ if(count($tabRes)==1)
 
   if($Res1["role"]=="admin")
    {
-    header('location:liste_utilisateurs_admin.php');
+    header('location:liste_tickets_admin.php');
     exit();
    }
   else if($Res1["role"]=="client")

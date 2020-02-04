@@ -19,7 +19,10 @@
 					<a href="Deposer.php" class="nav-link">Déposer un Ticket</a>
 				</li>
 				<li class="nav-list-item">
-					<a href="deconnexion.php" class="nav-link">Deconnexion</a>
+					<a href="AccueilUtil.php" class="nav-link">Mes Tickets</a>
+				</li>
+				<li class="nav-list-item">
+					<a href="Deconnexion.php" class="nav-link">Deconnexion</a>
 				</li>
 				<li class="nav-list-item">
 				<img onClick="" src="img/utilisateur.png" sizes="20x20">

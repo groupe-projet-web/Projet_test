@@ -1,4 +1,16 @@
-﻿<!DOCTYPE html>
+﻿<?php
+    require_once('listTicket.php');
+           
+    if(!isset($_SESSION["role"]))
+    {
+        die("<strong>Accès resevé aux personnes enregistés</strong>");
+    }
+    if($_SESSION["role"]!="client")
+    {
+        die("<strong>Vous n'etes pas un Utilisateur</strong>");
+    }
+?>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="utf-8">
@@ -15,14 +27,11 @@
 <?php include('headerutilisateur.php'); ?>
     <div class="container">  
             <h1 class="bg-info text-center">Liste des Tickets</h1>
-            <?php 
-            require_once('listTicket.php');
-            ?>
+            
      
-            <div center>
-                <table class ="table">
+            <div center style="overflow-x:auto; ">
+                <table bgcolor="#deb887" class ="table table-striped d-md-table table-bordered flex-column">
                     <tr>
-                        <th>id	</th>
                         <th>message </th>
                         <th>etat</th>
                         <th>reponse</th>
