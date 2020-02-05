@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
+    "\\js",
     "\\sql"
   ],
-  "SelectedNode": "\\sql\\script",
+  "SelectedNode": "\\js",
   "PreviewInSolutionExplorer": false
 }
