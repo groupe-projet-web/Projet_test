@@ -13,12 +13,14 @@ create table utilisateur(
 );
 
 create table ticket(
-                       id int,
+                       id int auto_increment,
                        message varchar(300),
                        etat varchar(30) not null,
                        reponse varchar(300),
                        date_ouvert datetime,
-                       auteur varchar(150),
+                       date_debut_traitement datetime,
+                       auteur varchar(150) not null,
+                       gestionnaire varchar(150),
                        constraint cle_primaire_tick primary key(id),
                        constraint fk_ticket foreign key (auteur) references utilisateur(login)
 );
@@ -41,5 +43,5 @@ insert into projet_web.utilisateur(login, pass, nom, prenom, email, role) values
 insert into projet_web.utilisateur(login, pass, nom, prenom, email, role) values ("mjackson","$2y$10$tk6v30HpnIw6o4usx9UvbuffMwAwonJbkB9v1oFgQdz.5S.LuB3f.","Mick","Jackson", "jackson@gmail.com","client");
 
 
-insert into projet_web.ticket(id, message, etat, reponse, date_ouvert, auteur) values (1,"Pain mal chargé", "ouvert", "",sysdate(),"totol");
-insert into projet_web.ticket(id, message, etat, reponse, date_ouvert, auteur) values (2,"Pain trop chargé", "ouvert", "",sysdate(),"titil");
+insert into projet_web.ticket(message, etat, reponse, date_ouvert, auteur) values ("Pain mal chargé", "ouvert", "",sysdate(),"totol");
+insert into projet_web.ticket(message, etat, reponse, date_ouvert, auteur) values ("Pain trop chargé", "ouvert", "",sysdate(),"titil");
