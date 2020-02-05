@@ -1,9 +1,10 @@
 {
   "ExpandedNodes": [
     "",
+    "\\img",
     "\\js",
     "\\sql"
   ],
-  "SelectedNode": "\\js",
+  "SelectedNode": "\\AccueilUtil.php",
   "PreviewInSolutionExplorer": false
 }

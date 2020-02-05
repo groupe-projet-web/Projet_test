@@ -39,9 +39,9 @@ $tabUtilisateurs = $requete->fetchAll(PDO::FETCH_ASSOC);
     <td>Auteur <img src="img\download.png"></td>
     <td>Etat <img src="img\download.png"></td>
     <td>Reponse <img src="img\download.png"></td>
-    <td>Date d'ouverture <img src="img\download.png"></td>
+    <td>Date d ouverture <img src="img\download.png"></td>
     <td>Etat <img src="img\download.png"></td>
-    <td>Supprimer</td>
+
     </thead>
     <?php
     foreach ($tabUtilisateurs as $Ligne) {
@@ -50,8 +50,8 @@ $tabUtilisateurs = $requete->fetchAll(PDO::FETCH_ASSOC);
                   <td>" . $Ligne['etat'] . " </td>
                   <td>" . $Ligne['reponse'] . " </td>
                   <td>" . $Ligne['date_ouvert'] . " </td>
-                  <td> " . $Ligne['etat'] . '</td>
-                  <td>  Supprimer </button> </td></tr>';
+                  <td> " . $Ligne['etat'] . "</td>
+                  </tr>";
     }
     ?>
 </table>
