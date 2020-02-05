@@ -28,24 +28,29 @@ $tabUtilisateurs = $requete->fetchAll(PDO::FETCH_ASSOC);
 <div style="overflow-x:auto;">
 <table bgcolor="#f5f5dc" class="table d-md-table table-bordered flex-column">
     <!-- Control buttons -->
-    <div id="myBtnContainer">
-        <button class="btn active" onclick="filterSelection('all')"> Afficher tout</button>
-        <button class="btn" onclick="filterSelection('cars')"> Ouverts</button>
-        <button class="btn" onclick="filterSelection('animals')"> Fermés</button>
-        <button class="btn" onclick="filterSelection('fruits')"> Annulés</button>
+    <div id="myBtnContainer" class="radio">
+        <h4 class="d-inline">Filtrer par : </h4>
+        <input name="filtreByEtat" checked type="radio" class="radio-inline" onclick="filterSelection('all')"> Afficher tout</input>
+        <input name="filtreByEtat" type="radio" class="radio-inline" onclick="filterByEtat('ouvert')"> Ouverts</button>
+        <input name="filtreByEtat" type="radio" class="radio-inline" onclick="filterByEtat('fermé')"> Fermés</button>
+        <input name="filtreByEtat" type="radio" class="radio-inline" onclick="filterByEtat('annulé')"> Annulés</button>
     </div>
-    <thead>
-    <td title="">Message </td>
-    <td>Auteur <img src="img\download.png"></td>
-    <td>Etat <img src="img\download.png"></td>
-    <td>Reponse <img src="img\download.png"></td>
-    <td>Date d'ouverture <img src="img\download.png"></td>
-    <td>Etat <img src="img\download.png"></td>
-    <td>Supprimer</td>
+    <br>
+    <thead class="bg-dark text-white">
+    <th title="">Message </th>
+    <th>Auteur <img src="img\download.png"></th>
+    <th>Etat <img src="img\download.png"></th>
+    <th>Reponse <img src="img\download.png"></th>
+    <th>Date d'ouverture <img src="img\download.png"></th>
+    <th>Etat <img src="img\download.png"></th>
+    <th>Supprimer</th>
     </thead>
     <?php
     foreach ($tabUtilisateurs as $Ligne) {
-        echo "<tr><td>" . $Ligne['message'] . " </td>
+        $Ligne['auteur'] = $auteur;
+        $Ligne['etat'] = $etat;
+
+        echo "<tr data-etat=$etat><td>" . $Ligne['message'] . " </td>
                   <td>" . $Ligne['auteur'] . " </td>
                   <td>" . $Ligne['etat'] . " </td>
                   <td>" . $Ligne['reponse'] . " </td>
