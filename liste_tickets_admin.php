@@ -23,7 +23,7 @@ $tabUtilisateurs = $requete->fetchAll(PDO::FETCH_ASSOC);
 	<script src="js/jquery-3.4.1.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 </head>
-<?php include('headerUtilisateur.php')?>
+<?php include('headerAdmin.php')?>
 <body>
 <br><br><br>
 <h1 class="bg-info text-center">Liste des Tickets</h1>
