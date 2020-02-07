@@ -10,7 +10,7 @@ if(!isset($_GET["login"]) || !isset($_GET["pass"]))
 
 
 // Cr�ation du texte de la requ�te
-$reqtxt="select pass,role from utilisateur where login=:log";
+$reqtxt="select pass,nom,role from utilisateur where login=:log";
 
 // Pr�paration
 $req=$maCnx->prepare($reqtxt);
@@ -37,6 +37,8 @@ if(count($tabRes)==1)
  {
   $_SESSION["login"]=$_GET["login"];
   $_SESSION["role"]=$Res1["role"];
+  $_SESSION["nom"]=$Res1["nom"];
+  var_dump($_SESSION);
 
   if($Res1["role"]=="admin")
    {

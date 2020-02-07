@@ -51,6 +51,7 @@
                         <td><?= $ticket['reponse'].' '?></td>
                         <td><?= $ticket['date_ouvert'].' '?></td>
 						<td style="text-align:center"> <button class='btn btn-danger' onclick="supTicket('<?=$ticket['id']?>')">Annuler</button></td>
+						
                     </tr>
                     <?php endforeach;?>
                 </table>
@@ -86,10 +87,7 @@ bootbox.confirm({
 
 function traiterRepSup(donnees)
 {
-	if(donnees !="----erreur----")
-	{
-		$("#"+donnees).remove();
-	}
+
 }
 </script>
 
