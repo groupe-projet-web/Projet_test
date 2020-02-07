@@ -50,7 +50,7 @@
                         <td><?= $ticket['etat'].' '?></td>
                         <td><?= $ticket['reponse'].' '?></td>
                         <td><?= $ticket['date_ouvert'].' '?></td>
-						<td style="text-align:center"> <button class='btn btn-danger' onclick="supTicket('<?=$ticket['id']?>')">suppimer</button></td>
+						<td style="text-align:center"> <button class='btn btn-danger' onclick="supTicket('<?=$ticket['id']?>')">Annuler</button></td>
                     </tr>
                     <?php endforeach;?>
                 </table>
