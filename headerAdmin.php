@@ -13,13 +13,13 @@
 			</div>
 			<ul class="nav-list">
 				<li class="nav-list-item">
-					<p><h3>Tickets d'Incidence</h3> </p>
+					<p><h3>ICI ON GERE!!!</h3> </p>
 				</li>
 				<li class="nav-list-item">
-					<a href="Deposer.php" class="nav-link">Déposer un Ticket</a>
+					<a href="liste_utilisateurs_admin.php" class="nav-link">Consulter tous les Utilisateurs</a>
 				</li> 
 				<li class="nav-list-item">
-					<a href="#" class="nav-link">Consulter tous les Tickets</a>
+					<a href="" class="nav-link">Consulter tous les Tickets</a>
 				</li>
 				<li class="nav-list-item">
 					<a href="Deconnexion.php" class="nav-link">Deconnexion</a>
