@@ -25,7 +25,7 @@
 
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Mes Informations</a>
+                            <a class="dropdown-item" href="mesInfo.php">Mes Informations</a>
                             <a class="dropdown-item" href="AccueilUtil.php">Mes Tickets</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="Deconnexion.php">Deconnexion</a>
