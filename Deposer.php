@@ -16,11 +16,15 @@ if(!isset($_SESSION["role"]))
 <link rel="stylesheet" type="text/css" href="/Web_Mini_Projet/mesCss/style.css" />
  <link rel="stylesheet" href="mesCss/bootstrap.min.css" />
 <link rel="stylesheet" href="mesCss/fichCss.css" />
+<link rel="stylesheet" type = "text/css" href="mesCss/style.css" />
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <title>Deposer un Ticket</title>
 </head>
 
 <body>
-<?php include('headerutilisateur.php'); ?>
+<?php include('headerUtilisateur.php'); ?>
 	<div class="container">
 	
 		<div align="center">

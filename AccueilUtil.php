@@ -15,12 +15,13 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="/Web_Mini_Projet/mesCss/style.css" />
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 	<link href="mesCss/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 
 	<script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 	<script src ="js/bootbox.min.js"> </script>
+
+    
 
    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
     <title>Mes Tickets</title>
@@ -29,7 +30,7 @@
 
     
 <body class=container>
-<?php include('headerutilisateur.php'); ?>
+<?php include('headerUtilisateur.php'); ?>
     <div class="container clearfix">  
             <h1 class="bg-info text-center">Liste des Tickets</h1>
             
