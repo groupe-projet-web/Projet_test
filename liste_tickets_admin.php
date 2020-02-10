@@ -22,6 +22,7 @@ $tabUtilisateurs = $requete->fetchAll(PDO::FETCH_ASSOC);
 
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src ="js/bootbox.min.js"> </script>
 
     <script type="text/javascript" language="javascript" src="TableFilter/tablefilter.js"></script>
 
@@ -66,41 +67,18 @@ $tabUtilisateurs = $requete->fetchAll(PDO::FETCH_ASSOC);
                     <button class='btn btn-info' onclick="traiteTicket('<?= $Ligne['id'] ?>')">Traiter</button>
                 </td>
                 <td style="text-align:center">
-                    <button class='btn btn-warning' data-toggle="modal" data-target="#exampleModal">Cloturer</button>
+                    <button class='btn btn-warning'  onclick="clotureTicket('<?= $Ligne['id'] ?>')">Cloturer</button>
                 </td>
             </tr>
 
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-                 aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Entrer Votre Reponse</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <form>
-                                <div class="form-group">
-                                    <label for="message-text" class="col-form-label">Message:</label>
-                                    <textarea class="form-control" id="message-text"></textarea>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Send message</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+           
 
             <?php
         }
         ?>
 
     </table>
+	<div id="message"> </div>
 </div>
 
 <script>
@@ -113,11 +91,19 @@ $tabUtilisateurs = $requete->fetchAll(PDO::FETCH_ASSOC);
     }
 
     function clotureTicket(idTic) {
-        $.get("cloturerTic.php", {id: idTic}, traiterRepClot);
+	bootbox.prompt("veuillez saisir la reponse!", function(result){ 
+    if(result) 
+	{
+	 $.get("cloturerTic.php", {id: idTic,reponse:result}, traiterRepClot);
+	}
+       });
+        
     }
 
     function traiterRepClot(donnees) {
-        location.assign(location.href);
+	
+     location.assign(location.href);
+		
     }
 </script>
 
