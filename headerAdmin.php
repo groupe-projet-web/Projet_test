@@ -9,26 +9,23 @@
 	<div style="background-color:#E6E6FA">
     
 		<nav class="main-navigation">
-			<div class="navbar-header animated fadeInUp">
-			</div>
-			<ul class="nav-list">
-				<li class="nav-list-item">
-					<p><h3>ICI ON GERE!!!</h3> </p>
-				</li>
-				<li class="nav-list-item">
+			<div class="navbar-header animated fadeInUp" style="display: flex; text-align: center; ">
+			<ul class="nav-list" style="margin: auto;">
+				<h3 style="text-align: center;">Gestion tickets d'incidents</h3>
+				<li class="nav-list-item btn-outline-info">
 					<a href="liste_utilisateurs_admin.php" class="nav-link">Consulter tous les Utilisateurs</a>
 				</li> 
-				<li class="nav-list-item">
-					<a href="" class="nav-link">Consulter tous les Tickets</a>
+				<li class="nav-list-item btn-outline-info">
+					<a href="liste_tickets_admin.php" class="nav-link">Consulter tous les Tickets</a>
 				</li>
-				<li class="nav-list-item">
+				<li class="nav-list-item btn-outline-danger">
 					<a href="Deconnexion.php" class="nav-link">Deconnexion</a>
 				</li>
-				<li class="nav-list-item">
+				<!--<li class="nav-list-item">
 				<img onClick="" src="img/utilisateur.png" sizes="20x20">
-				</li>
+				</li>-->
 			</ul>
-
+            </div>
 		</nav>
 
 	</div>
